@@ -488,22 +488,24 @@ PORTFOLIO BLOCK
 .project-card:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-
-.project-card:hover .overlay {
-  transform: translate(0, 0);
-}
-
-.project-card:focus .overlay {
-transform: translate(0, 0);
-}
-
 .card-link {
   display: block;
 }
 
-.card-link:hover,
+.card-link:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .card-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.card-link:hover .overlay {
+  transform: translate(0, 0);
+}
+
+.card-link:focus .overlay {
+transform: translate(0, 0);
 }
 
 .card-content {
@@ -665,12 +667,11 @@ FOOTER BLOCK
   fill: #f4f4fd;
 }
 
-
-/* ======================================================================================================================================================================== */
-
-
-
-
+/* 
+========================
+MODAL BLOCK
+========================
+ */
 
 .backdrop {
   position: fixed;
@@ -688,17 +689,16 @@ FOOTER BLOCK
   pointer-events: none;
 }
 
-
 .modal {
   position: absolute;
-      width: 408px;
-      min-height: 576px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #FCFCFC;
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-      border-radius: 4px;
+  width: 408px;
+  min-height: 576px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FCFCFC;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .btnmodal {
