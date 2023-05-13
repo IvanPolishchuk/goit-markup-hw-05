@@ -48,7 +48,7 @@ button {
 
 button:hover {
   background-color: var(--hover-color);
-transition: var(--hovertime);
+  transition: var(--hovertime);
 }
 
 button:focus {
@@ -59,7 +59,7 @@ button:focus {
 a {
   color: #2e2f42;
   text-decoration: none;
-  transition: var(--hovertime);
+  /* transition: var(--hovertime); */
 }
 
 /* 
@@ -102,7 +102,7 @@ MAIN BLOCK
 
 .current-tab {
   position: relative;
-  color: var(--hover-color);
+  color: #404bbf;
 }
 
 .current-tab::after {
@@ -137,6 +137,7 @@ HEADER BLOCK
   letter-spacing: 0.02em;
   color: var(--studio-color);
   padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-menu-item:hover {
@@ -152,6 +153,7 @@ HEADER BLOCK
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail:hover {
@@ -235,6 +237,7 @@ HERO BLOCK
   padding: 16px 32px;
   border-radius: 4px;
   border-color: #4d5ae5;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* 
@@ -386,6 +389,10 @@ TEAM BLOCK
   gap: 24px;
 }
 
+.social-list-item {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .social-link {
   display: flex;
   justify-content: center;
@@ -442,6 +449,7 @@ CLIENTS BLOCK
   height: 88px;
   border: 1px solid #8E8F99;
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -482,12 +490,14 @@ PORTFOLIO BLOCK
 .project-card {
   width: calc((100% - 48px) / 3);
   padding-top: 0;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card:hover,
 .project-card:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
 .card-link {
   display: block;
 }
@@ -505,7 +515,7 @@ PORTFOLIO BLOCK
 }
 
 .card-link:focus .overlay {
-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 .card-content {
@@ -523,6 +533,13 @@ transform: translate(0, 0);
   justify-content: center;
 }
 
+.filter-list-item {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .filter-button {
   display: block;
   max-height: 48px;
@@ -537,7 +554,6 @@ transform: translate(0, 0);
   border: 1px solid var(--filter-button-color);
   padding: 12px 24px;
   border-radius: 4px;
-  transition: color var(--overlay-anim), background-color var(--overlay-anim), border var(--overlay-anim), box-shadow var(--overlay-anim);
 }
 
 .filter-button:hover,
@@ -562,15 +578,13 @@ transform: translate(0, 0);
   letter-spacing: 0.02em;
   color: var(--svg-card);
   background-color: var(--link-color);
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 40px 32px;
   top: 0;
   left: 0;
   height: 100%;
   overflow: auto;
   transform: translate(0, 100%);
-  transition: transform var(--overlay-anim);      
+  transition: transform var(--overlay-anim);
 }
 
 .paragraph {
@@ -653,6 +667,7 @@ FOOTER BLOCK
   background-color: var(--link-color);
   border-color: var(--link-color);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover {
@@ -683,6 +698,7 @@ MODAL BLOCK
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity var(--overlay-anim), visibility var(--overlay-anim);
 }
+
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -699,6 +715,7 @@ MODAL BLOCK
   background: #FCFCFC;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btnmodal {
@@ -713,15 +730,19 @@ MODAL BLOCK
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  cursor: pointer;
   padding: 0;
-  transition: background-color var(--overlay-anim);
-  
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
+
 .modal-close {
   transition: fill var(--overlay-anim);
 }
-.btnmodal:hover, 
+
+.btnmodal:hover,
 .btnmodal:focus {
   background-color: var(--hover-color);
   fill: var(--backgr-color);
+  border: none;
 }
